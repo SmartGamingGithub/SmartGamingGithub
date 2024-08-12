@@ -1,0 +1,131 @@
+--Blox Fruits--
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/bfmobile", true))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumX/main/URANIUMMOBILE_V2.3.lua.txt", true))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Fiend1sh/FiendMain/main/FiendMainLoader", true))()
+
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/BloxFruitsMaxLevel.Lua"))()
+
+--ro gul-- 
+
+loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/master/Ro-Ghoul%20Auto%20Farm.lua")))()
+
+
+
+--psx--
+
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+
+
+
+--arsenal--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ccxmIcal/cracks/main/strikehub.lua"))()
+
+
+
+--Project Slayers--
+
+loadstring(game:HttpGet"https://raw.githubusercontent.com/CheapeeWastaken/Lazium/main/TheMain")()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/RbScripts/main/lazyhub.lua"))()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/w1nterofficial/northhub/main/northnation', true))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/asterionnn/versaware_free/main/VersawareFree.lua", true))()
+
+--Arm Wrestle Simulator--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/userp1/self/main/Main.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/Arm-wrestle-v3/main/Arm%20wrestle%20v3",true))();
+
+
+--lumber Tycoon 2--
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/Butterhub.txt'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/Freeze_water_and_click_to_teleport.Lua"))()
+loadstring(game.HttpGet("https://getexploits.com/cexecution/663105034770468864"))()
+
+--Blade Ball--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZzzScript/SpectacularHubScript/main/BladeBall"))()
+
+
+--slap battles--
+
+loadstring(game:HttpGet("https://rawscripts.net/raw/Slap-Battles-kviks-and-mrargy-script-10288"))()
+
+
+--Pet simulator 99--
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/PyroXHUB/IceIgnite/main/NOKEY'))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialPS99Developer/GemSpawner/main/GemSpawner.txt"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialPS99Developer/DupeHubPS99/main/DupeHubPS99.txt"))()
+
+
+--Speed script--
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/SpeedScript.Lua'))()
+
+
+--ESP Script--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/SmartESP.Lua"))()
+
+--Aimbot Script--
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/SmartAimbot.Lua'))()
+
+
+
+
+--Admin Script--
+
+loadstring(game:HttpGet("https://gist.github.com/someunknowndude/38cecea5be9d75cb743eac8b1eaf6758/raw"))()
+
+
+--Prisoner Life--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/Prisoner_Life_gun_giver.Lua"))()
+
+
+--Build Tools--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/Build_Tools_Giver.Lua"))()
+
+
+
+
+--Remote SPY--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+
+--Dark Dex--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+
+
+
+--Sky block--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/SmartAutoPickup.Lua"))()
+
+
+--Multiple Game Script--
+
+https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/Advanced_Script.Lua
+
+loadstring(game:HttpGet"(https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/Advanced_Script.Lua"))()
