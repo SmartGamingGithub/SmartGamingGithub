@@ -1,4 +1,4 @@
-local Item = "eye1"
+local Item = "Eye1"
 local Quantity = 100
  
 local Land = nil
