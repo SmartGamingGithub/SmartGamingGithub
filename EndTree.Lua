@@ -4,7 +4,7 @@ getgenv().Ancestor_Loaded = false
 
 repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild('PlayerGui') and game.Players.LocalPlayer.PlayerGui:FindFirstChild('OnboardingGUI') and game.Players.LocalPlayer.PlayerGui.OnboardingGUI.DoOnboarding.Loaded.Value
 
-local Maid, Ancestor, GUISettings, Connections = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/KhayneGleave/Ancestor/main/Maid.txt'))(), {
+local Maid, Ancestor, GUISettings, Connections = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/ancestormainui.Lua'))(), {
 
     SelectedTreeType             = 'Generic',
     BringTreeAmount              = 1,
@@ -6390,7 +6390,7 @@ Credits:CreateLabel('MrDizzler is my sugar daddy <3')
 local Toads = SettingsSection:CreateSubSection('Other GUIs')
 Toads:CreateButton('Execute Toads GUI', function()
 
-    loadstring(game:HttpGet('https://bit.ly/3x90l99'))('TOADS')
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/sourceeee.Lua'))('TOADS')
 
 end, true, true, 'Executes Toads GUI.')
 
