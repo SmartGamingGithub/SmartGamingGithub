@@ -1,6 +1,7 @@
 -- This script should be placed in StarterPlayerScripts or StarterCharacterScripts
 
 -- Function to create and apply the highlight effect to a player's character
+while wait() do
 local function highlightPlayer(player)
     if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         -- Create a Highlight instance
@@ -54,3 +55,4 @@ end)
 
 -- Run the initial highlight for all current players
 highlightAllPlayers()
+end
