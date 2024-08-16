@@ -1349,7 +1349,7 @@ loadstring(game:HttpGet('https://thisboy.000webhostapp.com/LT2%20TP.txt', true))
 end)
  
 guilt2luck.MouseButton1Down:connect(function()
-loadstring(game:HttpGet('https://pastebin.com/raw/71975mqi', true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/godsource.Lua', true))()
 end)
  
 leaked.MouseButton1Down:connect(function()
@@ -1778,5 +1778,5 @@ end)
  
 none.MouseButton1Down:connect(function()
 none.BackgroundColor3 = Color3.new(0.14902, 0.490196, 0.109804)
-loadstring(game:HttpGet('https://pastebin.com/raw/wxyTd8S9', true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/godsource2.Lua', true))()
 end)
