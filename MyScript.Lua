@@ -1,4 +1,11 @@
+local MainTab = Window:CreateTab("Local Player", nil)
+local MainSection = MainTabTab:CreateSection("Main")
+local ScriptTab = Window:CreateTab("More Script", nil)
+local ScriptSection = ScriptTab:CreateSection("The Script")
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartGamingGithub/SmartGamingGithub/main/RayfieldHub.Lua'))()
+local character = player.Character or player.CharacterAdded:Wait()
+local hum = character:WaitForChild("Humanoid")
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Math.Huge
 
 local Window = Rayfield:CreateWindow({
    Name = "SmartGaming's Hub",
@@ -26,10 +33,6 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("Local Player", nil)
-local MainSection = MainTabTab:CreateSection("Main")
-local ScriptTab = Window:CreateTab("More Script", nil)
-local ScriptSection = ScriptTab:CreateSection("The Script")
 
 local Toggle = MainTab:CreateToggle({
    Name = "Infinite Jump",
@@ -71,15 +74,12 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Slider = MainTab:CreateSlider({
-   Name = "Jump Power Slider",
-   Range = {50, 1000},
-   Increment = 1,
-   Suffix = "JumpPower",
-   CurrentValue = 50,
-   Flag = "JumpPowerSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-           game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+local Input = MainTab:CreateInput({
+   Name = "Jump Power",
+   PlaceholderText = "1-10000",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Text)
    end,
 })
 
@@ -103,23 +103,81 @@ Rayfield:Notify({
    end,
 })
 
-local Slider = MainTab:CreateSlider({
-   Name = "Health Slider",
-   Range = {1, 10000},
-   Increment = 1,
-   Suffix = "Speed",
-   CurrentValue = 100,
-   Flag = "HealthSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-           game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Math.Huge
-           game.Players.LocalPlayer.Character.Humanoid.Health = (Value)
+local Input = MainTab:CreateInput({
+   Name = "Walk Speed",
+   PlaceholderText = "1-1000",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+        hum.WalkSpeed = (Text)
    end,
 })
 
-local Button = MainTab:CreateButton({
+local Toggle = MainTab:CreateToggle({
    Name = "Infinite Health",
-   Callback = function()
-              game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Math.Huge
-              game.Players.LocalPlayer.Character.Humanoid.Health = Math.Huge
+   CurrentValue = false,
+   Flag = "InfiniteHealth", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   hum.Health = (Value)
+   end,
+})
+
+
+local Slider = MainTab:CreateSlider({
+   Name = "Fly Speed",
+   Range = {1, 1000},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 50,
+   Flag = "Flyspeed", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(FlySpeed)
+   
+   end,
+})
+
+
+local Keybind = MainTab:CreateKeybind({
+Name = "Fly Keybind",
+   CurrentKeybind = "Q",
+   HoldToInteract = false,
+   Flag = "Fly", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+local flying = false
+local speed = (FlySpeed)
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local rootPart = character:WaitForChild("HumanoidRootPart")
+
+local function startFlying()
+    humanoid.PlatformStand = true
+    local bodyVelocity = Instance.new("BodyVelocity")
+    bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+    bodyVelocity.MaxForce = Vector3.new(400000, 400000, 400000)
+    bodyVelocity.Parent = rootPart
+
+    local bodyGyro = Instance.new("BodyGyro")
+    bodyGyro.CFrame = rootPart.CFrame
+    bodyGyro.MaxTorque = Vector3.new(400000, 400000, 400000)
+    bodyGyro.Parent = rootPart
+
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if flying then
+            bodyVelocity.Velocity = (workspace.CurrentCamera.CFrame.LookVector * speed) + Vector3.new(0, game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Space) and speed or 0, 0)
+            bodyGyro.CFrame = workspace.CurrentCamera.CFrame
+        else
+            bodyVelocity:Destroy()
+            bodyGyro:Destroy()
+            humanoid.PlatformStand = false
+        end
+    end)
+end
+
+local function toggleFly()
+    flying = not flying
+    if flying then
+        startFlying()
+    end
+end
+toggleFly()
    end,
 })
